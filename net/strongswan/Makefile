@@ -43,6 +43,7 @@ PKG_MOD_AVAILABLE:= \
 	eap-identity \
 	eap-md5 \
 	eap-mschapv2 \
+	kdf \
 	eap-radius \
 	eap-tls \
 	farp \
@@ -175,6 +176,7 @@ $(call Package/strongswan/Default)
 	+strongswan-mod-eap-identity \
 	+strongswan-mod-eap-md5 \
 	+strongswan-mod-eap-mschapv2 \
+	+strongswan-mod-kdf \
 	+strongswan-mod-eap-radius \
 	+strongswan-mod-eap-tls \
 	+strongswan-mod-farp \
@@ -684,6 +686,7 @@ $(eval $(call BuildPlugin,duplicheck,advanced duplicate checking,))
 $(eval $(call BuildPlugin,eap-identity,EAP identity helper,))
 $(eval $(call BuildPlugin,eap-md5,EAP MD5 (CHAP) EAP auth,))
 $(eval $(call BuildPlugin,eap-mschapv2,EAP MS-CHAPv2 EAP auth,+strongswan-mod-md4 +strongswan-mod-des))
+$(eval $(call BuildPlugin,kdf,KDF,))
 $(eval $(call BuildPlugin,eap-radius,EAP RADIUS auth,))
 $(eval $(call BuildPlugin,eap-tls,EAP TLS auth,+strongswan-libtls))
 $(eval $(call BuildPlugin,farp,fake arp respsonses,))
